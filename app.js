@@ -1,5 +1,6 @@
 const SHEET_API_URL = "PUT_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
 const LOCAL_DATA_URL = "data/products.json";
+const DEFAULT_BUY_LINK = "https://www.facebook.com/boostify.shop9/";
 
 const grid = document.getElementById("grid");
 const statusBar = document.getElementById("statusBar");
@@ -45,9 +46,10 @@ function render() {
       const price = formatPrice(row.price);
       const status = normalizeStatus(row.status) === "sold" ? "sold" : "available";
       const badgeText = status === "sold" ? "ขายแล้ว" : "พร้อมขาย";
-      const buyLink = row.buy_link ? String(row.buy_link).trim() : "";
+      const rowBuyLink = row.buy_link ? String(row.buy_link).trim() : "";
+      const buyLink = rowBuyLink || DEFAULT_BUY_LINK;
       const buyButton =
-        status === "available" && buyLink
+        status === "available"
           ? `<a class="buy-btn" href="${buyLink}" target="_blank" rel="noopener">ติดต่อซื้อ</a>`
           : "";
       const img = row.image_url ? String(row.image_url).trim() : "";
