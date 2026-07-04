@@ -1,0 +1,29 @@
+SETUP (Beginner mode - easiest)
+
+Quick flow
+1) In your project folder, run:
+   prepare_storefront.bat
+
+2) This auto-generates:
+   - storefront\data\products.json
+   - storefront\images\*.png
+
+3) Create a new GitHub repository and upload ALL files inside storefront\
+   (index.html, app.js, styles.css, data\, images\)
+
+4) In GitHub repo: Settings > Pages
+   - Source: Deploy from a branch
+   - Branch: main / /(root)
+   - Save
+
+5) Open your GitHub Pages URL
+
+Daily update
+1) Run prepare_storefront.bat again
+2) Re-upload changed files in storefront\ to GitHub
+
+Optional advanced mode (Google Sheet API)
+- If you want realtime data from Google Sheet:
+  1) Put code from storefront\apps_script.gs in Apps Script
+  2) Deploy Web App
+  3) Set SHEET_API_URL in storefront\app.js

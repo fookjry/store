@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>ID Shop</h1>
+    <p>เลือกซื้อไอดีที่พร้อมขายได้ทันที</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="searchInput" type="text" placeholder="ค้นหา ID / ชื่อสินค้า">
+      <label class="toggle">
+        <input id="showSold" type="checkbox">
+        <span>แสดงสินค้าที่ขายแล้ว</span>
+      </label>
+      <button id="reloadBtn" type="button">รีโหลดข้อมูล</button>
+    </section>
+
+    <section id="statusBar" class="status">กำลังโหลดข้อมูล...</section>
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
