@@ -54,23 +54,16 @@ function render() {
           ? `<a class="buy-btn" href="${buyLink}" target="_blank" rel="noopener">ติดต่อซื้อ</a>`
           : "";
       const img = row.image_url ? String(row.image_url).trim() : "";
-      const viewButton = img
-        ? `<a class="view-btn" href="${img}" target="_blank" rel="noopener">ดูภาพเต็ม</a>`
-        : "";
 
       return `
         <article class="card">
-          <a class="card-image" href="${img}" target="_blank" rel="noopener"
-             style="background-image:url('${img}')" aria-label="ดูภาพเต็ม ${id}"></a>
+          <img src="${img}" alt="${id}" loading="lazy" referrerpolicy="no-referrer">
           <div class="card-body">
             <div class="id">${id}</div>
             <div class="title">${title}</div>
             <div class="meta">ราคา: ${price}</div>
             <div class="meta"><span class="badge ${status}">${badgeText}</span></div>
-            <div class="actions">
-              ${viewButton}
-              ${buyButton}
-            </div>
+            ${buyButton}
           </div>
         </article>
       `;
