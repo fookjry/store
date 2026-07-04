@@ -1,6 +1,7 @@
 const SHEET_API_URL = "PUT_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
 const LOCAL_DATA_URL = "data/products.json";
 const DEFAULT_BUY_LINK = "https://www.facebook.com/boostify.shop9/";
+const APP_VERSION = "2026-07-04-2335";
 
 const grid = document.getElementById("grid");
 const statusBar = document.getElementById("statusBar");
@@ -86,9 +87,9 @@ async function loadData() {
 
     allRows = data;
     if (useSheet) {
-      statusBar.textContent = "โหลดข้อมูลจาก Google Sheet สำเร็จ";
+      statusBar.textContent = `โหลดข้อมูลจาก Google Sheet สำเร็จ (${APP_VERSION})`;
     } else {
-      statusBar.textContent = "โหลดข้อมูลจากไฟล์ local สำเร็จ";
+      statusBar.textContent = `โหลดข้อมูลจากไฟล์ local สำเร็จ (${APP_VERSION})`;
     }
     render();
   } catch (error) {
