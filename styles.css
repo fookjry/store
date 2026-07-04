@@ -11,17 +11,32 @@ body {
 
 .topbar {
   background: linear-gradient(135deg, #1d4ed8, #4338ca);
-  padding: 20px;
+  padding: 18px 20px 22px;
   text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.brand {
+  display: inline-block;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #dbeafe;
 }
 
 .topbar h1 {
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
 }
 
-.topbar p {
+.topbar p,
+.subtitle {
   margin: 0;
-  opacity: 0.9;
+  opacity: 0.95;
+  line-height: 1.45;
 }
 
 .container {
